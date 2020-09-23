@@ -1,0 +1,95 @@
+.food {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px grey;
+  margin: 20px;
+  display: inline-block;
+  }
+
+.card__title {
+  font-weight: 500;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  }
+  
+.card__text {
+  font-size: 22px;
+  }
+
+.card__calories {
+  font-size: 15px;
+  color: #c60;
+}
+  
+.card__img {
+  width: 100%;
+  margin-bottom: 25px;
+  }
+
+.rating-area {
+  overflow: hidden;
+  width: 265px;
+  margin: 0 auto;
+  }
+
+.rating-area:not(:checked) > input {
+  display: none;
+  }
+
+.rating-area:not(:checked) > label {
+  float: center;
+  width: 42px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 50px;
+  line-height: 50px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+  }
+
+.rating-area:not(:checked) > label:before {
+  content: '★';
+  }
+
+.rating-area > input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+  }
+
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: gold;
+  }
+
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+  }
+
+.rate-area > label:active {
+  position: relative;
+  }
+
+@media  (max-width: 1050px){
+.card {
+  width: 250px;
+}
+  }
+
+@media  (max-width: 960px) {
+  .card {
+    width: 210px;
+    }
+      }
